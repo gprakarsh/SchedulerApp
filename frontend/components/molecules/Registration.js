@@ -35,7 +35,7 @@ export default function Registration({ setRenderLogin, loggedIn, setLoggedIn, re
 
         if (geocode.lat) {
             return (
-                <RegistrationForm4 form={form} setForm={setForm} address={address} geocode={geocode} name={name} email={email} password={password}/>
+                <RegistrationForm4 register={register} form={form} setForm={setForm} address={address} geocode={geocode} name={name} email={email} password={password}/>
             )
         }
 

@@ -8,7 +8,7 @@ export default function PasswordForm2({ email, setForm, form, password, setPassw
     // Keyboard.show()
     const passwordValidator = () => {
         if(password.length>0){
-            return <LinearGradient style={styles.nextIcon} colors={['#A12CF5', '#8E29FA', '#8327FC']}><View ><Text onPress={() => setForm(form + 1)}><MaterialIcons size={40} color="white" name="navigate-next" /></Text></View></LinearGradient>
+            return <LinearGradient style={styles.nextIcon} colors={['#A12CF5', '#8E29FA', '#8327FC']}><View ><Text onPress={() => login(email,password)}><MaterialIcons size={40} color="white" name="navigate-next" /></Text></View></LinearGradient>
         }
         else{
             return <View style={styles.nextIcon}><Text><MaterialIcons size={40} color="white" name="navigate-next" /></Text></View>
@@ -17,7 +17,7 @@ export default function PasswordForm2({ email, setForm, form, password, setPassw
 
     return (
         <KeyboardAvoidingView style={styles.container} behavior={Platform.select({android: undefined, ios: 'padding'})} enabled>
-            <View style={styles.prevIcon}><Text onPress={() => login(email,password)}><MaterialIcons size={35} color="white" name="navigate-next" /></Text></View>
+            <View style={styles.prevIcon}><Text onPress={() => setForm(form - 1)}><MaterialIcons size={35} color="white" name="navigate-next" /></Text></View>
             <View style={styles.subCon}>
                 <Text style={styles.text}>Enter your password</Text>
                 <TextInput 

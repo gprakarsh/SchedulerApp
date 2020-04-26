@@ -15,31 +15,36 @@ export default function App() {
   const login = async (email, password) => {
     //axios post request
     //setLoggedIn 
+    console.log(email,password)
+    setLoggedIn(true)
   }
 
   const register = async (name, email, password, geocode) => {
     //axios post request
-    //setLoggedIn 
+    //setLoggedIn
+    console.log(name, email, password, geocode) 
+    setLoggedIn(true)
   }
 
   const logout = () => {
     //axios post request
     //setLoggedIn 
+    setLoggedIn(false)
   }
 
-  if (!loggedIn) {
-    if (renderLogin) {
-      return <Login setRenderLogin={setRenderLogin} login={login} />
-    }
-    else {
-      return (
-        <Registration setRenderLogin={setRenderLogin} register={register} />
-      )
-    }
-  }
+  // if (!loggedIn) {
+  //   if (renderLogin) {
+  //     return <Login setRenderLogin={setRenderLogin} login={login} />
+  //   }
+  //   else {
+  //     return (
+  //       <Registration setRenderLogin={setRenderLogin} register={register} />
+  //     )
+  //   }
+  // }
   return (
     <NativeRouter>
-      <View>
+      <View style={{flex:1,backgroundColor:'black'}}>
         {routes}
         <Navbar />
       </View>

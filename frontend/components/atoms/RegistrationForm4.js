@@ -6,7 +6,7 @@ import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import MapView from 'react-native-maps';
 import { LinearGradient } from 'expo-linear-gradient';
 
-export default function RegistrationForm4({ setForm, form, address, geocode, name, email, password }) {
+export default function RegistrationForm4({ setForm, form, address, geocode, name, email, password, register }) {
 
   
 
